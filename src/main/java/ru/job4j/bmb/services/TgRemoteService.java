@@ -10,11 +10,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.job4j.bmb.model.User;
-import ru.job4j.repository.UserRepository;
+import ru.job4j.bmb.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Map;
 
 @SuppressWarnings("checkstyle:EmptyLineSeparator")
@@ -95,7 +94,7 @@ public class TgRemoteService extends TelegramLongPollingBot {
                 var user = new User();
                 user.setClientId(message.getFrom().getId());
                 user.setChatId(chatId);
-                userRepository.add(user);
+                userRepository.save(user);
                 send(sendButtons(chatId));  // Метод для отправки кнопок пользователю
             }
         }

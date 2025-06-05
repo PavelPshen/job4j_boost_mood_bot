@@ -3,9 +3,7 @@ package ru.job4j.bmb.services;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.job4j.bmb.model.User;
-import ru.job4j.repository.UserRepository;
+import ru.job4j.bmb.repository.UserRepository;
 
 @Service
 public class RemindService {
