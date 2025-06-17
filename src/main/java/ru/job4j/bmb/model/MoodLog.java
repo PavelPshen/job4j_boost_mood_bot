@@ -1,6 +1,8 @@
 package ru.job4j.bmb.model;
 
 import jakarta.persistence.*;
+import ru.job4j.bmb.content.Content;
+
 import java.util.Objects;
 
 @Entity
@@ -26,6 +28,14 @@ public class MoodLog {
 
     public long getId() {
         return id;
+    }
+
+    public Mood getMood() {
+        return mood;
+    }
+
+    public long getCreatedAt() {
+        return createdAt;
     }
 
     @Override
