@@ -16,6 +16,11 @@ public class MoodContent {
 
     private String text;
 
+    public MoodContent(Mood mood, String text) {
+        this.mood = mood;
+        this.text = text;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -30,6 +35,10 @@ public class MoodContent {
 
     public String getText() {
         return text;
+    }
+
+    public Mood getMood() {
+        return mood;
     }
 
     @Override
